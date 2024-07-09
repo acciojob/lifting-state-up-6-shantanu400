@@ -8,11 +8,24 @@ export default function ShowItem(props) {
     <div>
       {toggle ? (
         <>
+        <ul>
+          <li>
           <p>{TodoItem}</p>
           <button onClick={()=>handleComp(settoggle)}>Completed</button>
+          </li>
+        </ul>
+         
         </>
       ) : (
-        <p>{TodoItem}</p>
+        <>
+         <ul>
+          <li>
+          <p>{TodoItem}</p>
+          </li>
+        </ul>
+        
+        </>
+       
       )}
     </div>
   );

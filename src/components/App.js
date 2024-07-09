@@ -17,7 +17,13 @@ const App = () => {
 
   return (
     <div>
+      <h1>Parent Component</h1>
+      <h3>Child Component</h3>
+      
         <TodoList TodoItems={TodoItems} handleComp={handleComp} />
+        
+      \
+       
     </div>
   )
 }
