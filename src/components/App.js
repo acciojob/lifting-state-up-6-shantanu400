@@ -1,11 +1,23 @@
 
-import React from "react";
-import './../styles/App.css';
+import React,{useState} from "react";
+import "../styles/App.css"
+import TodoList from "./TodoList";
+import ShowItem from "./showItem";
+
+let TodoItems=["read","write","mugup","apply"];
 
 const App = () => {
+
+  
+  function handleComp(settoggle){
+    console.log("in handlecomp")
+    //event.preventDefault();
+    settoggle(false);
+  }
+
   return (
     <div>
-        {/* Do not remove the main div */}
+        <TodoList TodoItems={TodoItems} handleComp={handleComp} />
     </div>
   )
 }
