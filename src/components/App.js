@@ -1,8 +1,8 @@
 
-import React,{useState} from "react";
+import React from "react";
 import "../styles/App.css"
 import TodoList from "./TodoList";
-import ShowItem from "./showItem";
+//import ShowItem from "./ShowItem";
 
 let TodoItems=["read","write","mugup","apply"];
 
