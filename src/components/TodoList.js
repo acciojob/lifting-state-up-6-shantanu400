@@ -1,8 +1,8 @@
 import React from "react";
-import ShowItem from "./showItem";
+import ShowItem from "./ShowItem";
 
 export default function TodoList(props){
-    const {TodoItems,handleComp,toggle}=props;
+    const {TodoItems,handleComp}=props;
     return(
         <>
          {
