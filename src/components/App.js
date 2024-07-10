@@ -17,15 +17,19 @@ const App = () => {
   console.log(TodoItems);
 }, [TodoItems]);
   function handleComplete(index) {
+    console.log(index);
     const newTodos = TodoItems.map((todo, i) => {
       if (i === index) {
+        console.log(TodoItems[index].state);
         return { ...todo, state: true };
+
       }
       return todo;
     });
     setTodoItems(newTodos);
     console.log("in handle" , TodoItems);
   }
+
 
   return (
     <div>

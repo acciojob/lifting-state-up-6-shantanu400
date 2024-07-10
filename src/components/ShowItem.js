@@ -1,8 +1,9 @@
 import React from "react";
 
-export default function ShowItem(props) {
+export default function showItem(props) {
   const {TodoItem,handleComplete,index} = props;
   const {task,state}=TodoItem;
+  console.log(index);
   
   return (
     <div>
@@ -21,7 +22,7 @@ export default function ShowItem(props) {
           <ul>
             <li>
               <p>{task}</p>
-              <p>Completed</p>
+              
             </li>
           </ul>
         </>

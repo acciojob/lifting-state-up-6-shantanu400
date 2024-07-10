@@ -1,5 +1,5 @@
 import React from "react";
-import ShowItem from "./ShowItem";
+import ShowItem from "./showItem";
 
 export default function TodoList(props){
     const {TodoItems,handleComplete}=props;
@@ -7,7 +7,7 @@ export default function TodoList(props){
         <>
          {
             TodoItems.map((item,index)=>{
-                return <ShowItem key={index} TodoItem={item} handleComplete={handleComplete} />
+                return <ShowItem index={index} TodoItem={item} handleComplete={handleComplete} />
             })
         }
         </>
