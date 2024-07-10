@@ -1,18 +1,30 @@
 
-import React from "react";
+import React,{useState,useEffect} from "react";
 import "../styles/App.css"
 import TodoList from "./TodoList";
 //import ShowItem from "./ShowItem";
 
-let TodoItems=["Learn React","Built a React app","Deploy the React App"];
 
 const App = () => {
 
+  const [TodoItems,setTodoItems]=useState([
+    {task:'Learn React',state:false},
+    {task:'Built a React app',state:false},
+    {task:'Deploy the React App',state:false}
+  ]);
   
-  function handleComp(settoggle){
-    console.log("in handlecomp")
-    //event.preventDefault();
-    settoggle(false);
+  useEffect(() => {
+  console.log(TodoItems);
+}, [TodoItems]);
+  function handleComplete(index) {
+    const newTodos = TodoItems.map((todo, i) => {
+      if (i === index) {
+        return { ...todo, state: true };
+      }
+      return todo;
+    });
+    setTodoItems(newTodos);
+    console.log("in handle" , TodoItems);
   }
 
   return (
@@ -20,9 +32,9 @@ const App = () => {
       <h1>Parent Component</h1>
       <h3>Child Component</h3>
       
-        <TodoList TodoItems={TodoItems} handleComp={handleComp} />
+        <TodoList TodoItems={TodoItems} handleComplete={handleComplete} />
         
-      \
+      
        
     </div>
   )

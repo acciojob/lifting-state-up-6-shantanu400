@@ -1,32 +1,33 @@
-import React, { useState } from "react";
+import React from "react";
 
 export default function ShowItem(props) {
-  const {TodoItem,handleComp} = props;
- 
-  const [toggle, settoggle] = useState(true);
+  const {TodoItem,handleComplete,index} = props;
+  const {task,state}=TodoItem;
+  
   return (
     <div>
-      {toggle ? (
+      {state===false ? (
         <>
         <ul>
           <li>
-          <p>{TodoItem}</p>
-          <button onClick={()=>handleComp(settoggle)}>Complete</button>
+          <p>{task}</p>
+          <button onClick={()=>handleComplete(index)}>Complete</button>
           </li>
         </ul>
          
         </>
       ) : (
         <>
-         <ul>
-          <li>
-          <p>{TodoItem}</p>
-          </li>
-        </ul>
-        
+          <ul>
+            <li>
+              <p>{task}</p>
+              <p>Completed</p>
+            </li>
+          </ul>
         </>
-       
-      )}
-    </div>
-  );
-}
+      )
+      }
+      </div>
+      )
+          }
+      
