@@ -4,7 +4,7 @@ import "../styles/App.css"
 import TodoList from "./TodoList";
 //import ShowItem from "./ShowItem";
 
-let TodoItems=["read","write","mugup","apply"];
+let TodoItems=["Learn React","Built a React app","Deploy the React App"];
 
 const App = () => {
 

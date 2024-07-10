@@ -11,7 +11,7 @@ export default function ShowItem(props) {
         <ul>
           <li>
           <p>{TodoItem}</p>
-          <button onClick={()=>handleComp(settoggle)}>Completed</button>
+          <button onClick={()=>handleComp(settoggle)}>Complete</button>
           </li>
         </ul>
          
